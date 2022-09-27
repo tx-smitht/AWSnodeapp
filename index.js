@@ -3,7 +3,7 @@
 const express = require("express"); // require express
 const app = express(); // create app as an express object
 const path = require("path"); // require path
-const port = 80;
+const port = 5000;
 app.use(express.static("public"));
 
 // connect to database postgres
