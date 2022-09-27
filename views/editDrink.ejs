@@ -1,0 +1,56 @@
+<!--
+    Author: Thomas Smith
+    Section: 002
+    Description: edit drink page. Shows current info and allows to edit.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Edit Drink</title>
+  </head>
+  <body>
+    <form action="/editDrink" method="post">
+      <fieldset style="width: 0px">
+        <legend>Edit Drink</legend>
+        <input type="hidden" name="drink_id" id="drink_id" value="<%= drinks[0].drink_id %> ">
+        <label for="drink_name">Drink Name</label>
+        <input
+          type="text"
+          name="drink_name"
+          id="drink_name" value="<%= drinks[0].drink_name %> "
+        />
+        <label for="drink_ingredients">Drink Ingredients</label>
+        <input
+          type="text"
+          name="drink_ingredients"
+          id="drink_ingredients" value="<%= drinks[0].drink_ingredients %> "
+        />
+        <label for="drink_price">Drink Price</label>
+        <input type="text" id="drink_price" name="drink_price" min="0" max="10" value="<%= parseFloat(drinks[0].drink_price) %> ">
+        <label for="drink_ranking">Drink Ranking</label>
+        <input type="number" step=".001" id="drink_ranking" name="drink_ranking" min="0" max="10" value="<%= parseInt(drinks[0].drink_ranking) %>">
+        <fieldset style="width: 150px;">
+        <legend>Sweetness level</legend>
+                <label for="low">Low</label>
+                <input type="radio" name="drink_sweetness" id="low" value="L" <%= drinks[0].drink_sweetness == "L" ? "checked" : "" %> ><br>
+                <label for="medium">Medium</label>
+                <input type="radio" name="drink_sweetness" id="medium" value="M" <%= drinks[0].drink_sweetness == "M" ? "checked" : "" %>><br>
+                <label for="high">High</label>
+                <input type="radio" name="drink_sweetness" id="high" value="H" <%= drinks[0].drink_sweetness == "H" ? "checked" : "" %>> 
+        </fieldset>
+        <label for="tasted">Tasted (Y/N)</label>
+        <input name="tasted" id="tasted" type="checkbox" <%= drinks[0].tasted == "Y" ? "checked" : "" %>>
+        <br>
+        <br>
+
+        <input type="submit" value="Save">
+    </form>
+  </body>
+</html>

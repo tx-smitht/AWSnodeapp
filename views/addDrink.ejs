@@ -1,0 +1,55 @@
+<!--
+    Author: Thomas Smith
+    Section: 002
+    Description: Add drink page
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Add Drink</title>
+  </head>
+  <body>
+    <form action="/addDrink" method="post">
+      <fieldset style="width: 0px">
+        <legend>Add Drink</legend>
+        <label for="drink_name">Drink Name</label>
+        <input
+          type="text"
+          name="drink_name"
+          id="drink_name" 
+        />
+        <label for="drink_ingredients">Drink Ingredients</label>
+        <input
+          type="text"
+          name="drink_ingredients"
+          id="drink_ingredients"
+        />
+        <label for="drink_price">Drink Price</label>
+        <input type="text" id="drink_price" name="drink_price" min="0" max="10">
+        <label for="drink_ranking">Drink Ranking</label>
+        <input type="number" id="drink_ranking" name="drink_ranking" min="0" max="10">
+        <fieldset style="width: 150px;">
+        <legend>Sweetness level</legend>
+                <label for="low">Low</label>
+                <input type="radio" name="drink_sweetness" id="low" value="L"><br>
+                <label for="medium">Medium</label>
+                <input type="radio" name="drink_sweetness" id="medium" value="M"><br>
+                <label for="high">High</label>
+                <input type="radio" name="drink_sweetness" id="high" value="H"> 
+        </fieldset>
+        <label for="tasted">Tasted (Y/N)</label>
+        <input name="tasted" id="tasted" type="checkbox">
+        <br>
+        <br>
+
+        <input type="submit" value="Save">
+    </form>
+  </body>
+</html>
