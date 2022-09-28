@@ -25,7 +25,7 @@ app.set("view engine", "ejs"); // make ejs the view engine and make it look for 
 
 // home page
 app.get("/", (req,res) => {
-    res.render("apipage")
+    res.render("home")
 });
 
 // take to the API page
