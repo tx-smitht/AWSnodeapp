@@ -33,6 +33,11 @@ app.get("/apipage", (req,res) => {
     res.render("apipage")
 })
 
+// take to the azure ML page this time
+app.get("/azureml", (req,res) => {
+  res.render("azureml")
+})
+
 // crud ops
 
 // create
