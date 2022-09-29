@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title> Thomas W. Smith | API's</title>
+        <title> Thomas W. Smith | Azure ML</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -58,12 +58,32 @@
                 
                 <div style="margin: auto; width: 50%;">
                     <div style="margin: auto; width: 50%; border: 3px solid rgb(14, 197, 151); padding: 10px; inline-size: min-content;">
-                        <form action="">
+
+                        <form action=""> <!--  (Age,Km,Ftype,Hp,Color,Automatic,Cc,Doors,Weight) -->
                             <fieldset >
-                                Enter first name
+                                <label for="age">Enter the age:</label>
+                                <input type="number" id="age">
+                                <label for="km">Enter the km:</label>
+                                <input type="number" id="km">
+                                <label for="fuel">Enter the fuel type:</label>
+                                <input type="text" id="fuel">
+                                <label for="hp">Enter the hp:</label>
+                                <input type="number" id="hp">
+                                <label for="color">Enter the color:</label>
+                                <input type="text" id="color">
+                                <label for="trans">Enter automatic or manual:</label>
+                                <input type="text" id="trans">
+                                <label for="ccs">Enter the cc's:</label>
+                                <input type="number" id="ccs">
+                                <label for="doors">Enter the doors:</label>
+                                <input type="number" id="doors">
+                                <label for="weight">Enter the weight:</label>
+                                <input type="number" id="weight">
+
+
                                 <input type="text" name="firstName" id="firstName"><br><br>
-                                <button type="button" onclick="checkName();">Check Name</button><br><br>
-                                <p id="nameoutput"></p> 
+                               
+                                <p id="MLoutput"></p> 
                             </fieldset>
                         </form>
                     </div>
