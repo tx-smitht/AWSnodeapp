@@ -10,7 +10,7 @@ app.use(express.static("public"));
 const knex = require("knex")({
     client: "pg",
     connection: {
-      host: "localhost",
+      host: "drink-db-aws.cw82rnokcj7v.us-west-1.rds.amazonaws.com",
       user: "postgres",
       password: "password",
       database: "postgres",
