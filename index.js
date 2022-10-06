@@ -15,7 +15,8 @@ const knex = require("knex")({
       password: "password",
       database: "postgres",
       port: 5432,
-    },
+    }, 
+    pool: { min: 0, max: 7 }
   });
 
 app.use(express.urlencoded({ extended: true })); // make it so we can read from body
